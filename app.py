@@ -28,7 +28,7 @@ def home():
 # GET - Fetch all applications
 
 @app.route("/api/application", methods=["GET"])
-def get_applications():
+def get_application():
     db = get_db_connection()
     cursor = db.cursor(dictionary=True)
 
