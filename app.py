@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 import mysql.connector
 
 app = Flask(__name__)
@@ -21,7 +21,7 @@ def get_db_connection():
 
 @app.route("/")
 def home():
-    return "Job Application Tracker API is running!"
+    return render_template("index.html")
 
 
 
